@@ -1,0 +1,9 @@
+python3 nl.py test/nl_test.txt 
+1  lalala
+2  
+3  escape
+4  
+5  w
+6  o
+7  r
+8  d
