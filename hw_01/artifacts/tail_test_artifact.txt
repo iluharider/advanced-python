@@ -1,0 +1,37 @@
+python3 tail.py test/tail_test.txt test/tail_test_2.txt 
+==> test/tail_test.txt <==
+11. Integer aliquet ultrices turpis, nec laoreet mauris facilisis eu.
+12. Cras suscipit velit id turpis fermentum, at mollis justo lacinia.
+13. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+14. Vivamus pretium justo nec velit imperdiet vehicula.
+15. Donec sodales nulla at tellus ultricies vehicula.
+16. Sed dignissim neque nec tortor congue, sed convallis elit condimentum.
+17. Nam feugiat mi nec est vestibulum, id fermentum turpis luctus.
+18. Maecenas id eros nec libero aliquet luctus.
+19. Vestibulum tincidunt lectus vel justo varius, eu consectetur dui dapibus.
+20. Curabitur consectetur felis in neque aliquam, ut vestibulum felis sollicitudin.
+
+==> test/tail_test_2.txt <==
+6. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+7. Fusce aliquet tincidunt ante, eget finibus magna sagittis a.
+8. Nulla vel ante sit amet ex accumsan dapibus.
+9. Morbi nec tortor vel nisl facilisis dapibus.
+10. Proin auctor justo at mi posuere, at vestibulum dui ultricies.
+11. Aenean ullamcorper lectus at nulla fermentum, at fermentum enim feugiat.
+12. Integer aliquet ultrices turpis, nec laoreet mauris facilisis eu.
+13. Cras suscipit velit id turpis fermentum, at mollis justo lacinia.
+14. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+15. Vivamus pretium justo nec velit imperdiet vehicula.
+
+python3 tail.py test/empty.txt 
+
+python3 tail.py test/nl_test.txt 
+lalala
+
+escape
+
+w
+o
+r
+d
+
