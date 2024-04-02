@@ -1,0 +1,5 @@
+python3 task_2.py 
+matrix size: (10, 10)
+Get value from (1,1): 6
+set value 10 at (1,1)
+print setted value: 10

@@ -73,9 +73,7 @@ if __name__ == "__main__":
     result_addition = matrix1 + matrix2
     result_multiplication = matrix1 * matrix2
     result_matrix_multiplication = matrix1 @ matrix2
-
     
-
-    Matrix.write_matrix_to_file(result_addition, 'artifacts/matrix+.txt')
-    Matrix.write_matrix_to_file(result_multiplication, 'artifacts/matrix*.txt')
-    Matrix.write_matrix_to_file(result_matrix_multiplication, 'artifacts/matrix@.txt')
+    Matrix.write_matrix_to_file(result_addition, 'artifacts/task_1/matrix+.txt')
+    Matrix.write_matrix_to_file(result_multiplication, 'artifacts/task_1/matrix*.txt')
+    Matrix.write_matrix_to_file(result_matrix_multiplication, 'artifacts/task_1/matrix@.txt')
