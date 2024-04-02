@@ -1,12 +1,12 @@
 import numpy as np
 
 class MatrixMixin:
-    def get_value(self, i, j):
+    def get_val(self, i, j):
         if (i > self.rows or i < 0 or j > self.cols or j < 0):
             raise ValueError("index is out of matrix sizes")
         return self.matrix[i][j]
 
-    def set_value(self, i, j, value):
+    def set_val(self, i, j, value):
         if (i > self.rows or i < 0 or j > self.cols or j < 0):
             raise ValueError("index is out of matrix sizes")
         self.matrix[i][j] = value
@@ -17,7 +17,7 @@ class MatrixMixin:
 
         return return_string
     
-    def save_to_file(self, path):
+    def write_to_file(self, path):
         with open(path, 'w') as file:
             file.write(self.__str__() + '\n')
     
@@ -34,15 +34,15 @@ class Matrix(MatrixMixin, np.lib.mixins.NDArrayOperatorsMixin):
             raise ValueError("rows have different length")
         
     def __array_ufunc__(self, ufunc, method, *inputs, **kwargs):
-        out = kwargs.get('out', ())
-        for x in inputs + out:
-            if not isinstance(x, (Matrix,)):
-                return NotImplemented
+        output = kwargs.get('out', ())
+
+        if any(not isinstance(x, Matrix) for x in inputs + output):
+            return NotImplemented
 
         inputs = tuple(x.matrix if isinstance(x, Matrix) else x for x in inputs)
 
-        if out:
-            kwargs['out'] = tuple(x.matrix if isinstance(x, Matrix) else x for x in out)
+        if output:
+            kwargs['out'] = tuple(x.matrix if isinstance(x, Matrix) else x for x in output)
 
         result = getattr(ufunc, method)(*inputs, **kwargs)
 
@@ -66,16 +66,16 @@ if __name__ == "__main__":
     res3 = mtx_1 * mtx_2
     res4 = mtx_1 @ mtx_2
 
-    res1.save_to_file("./artifacts/task_2/matrix+.txt")
-    res2.save_to_file("./artifacts/task_2/matrix-.txt")
-    res3.save_to_file("./artifacts/task_2/matrix_mul.txt")
-    res4.save_to_file("./artifacts/task_2/matrix@.txt")
+    res1.write_to_file("./artifacts/task_2/matrix+.txt")
+    res2.write_to_file("./artifacts/task_2/matrix-.txt")
+    res3.write_to_file("./artifacts/task_2/matrix_mul.txt")
+    res4.write_to_file("./artifacts/task_2/matrix@.txt")
 
     # getters and setters usage
     print(f"matrix size: {mtx_1.get_size()}")
-    print(f"Get value from (1,1): {mtx_1.get_value(1, 1)}")
+    print(f"Get value from (1,1): {mtx_1.get_val(1, 1)}")
 
     print("set value 10 at (1,1)")
-    mtx_1.set_value(1, 1, 10)
-    print(f"print setted value: {mtx_1.get_value(1, 1)}")
+    mtx_1.set_val(1, 1, 10)
+    print(f"print setted value: {mtx_1.get_val(1, 1)}")
     
