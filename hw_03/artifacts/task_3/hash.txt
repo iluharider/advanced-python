@@ -1,2 +1,3 @@
 A@B hash: 68
 C@D hash: 35
+(these are true hashes without caching)  
