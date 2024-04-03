@@ -1,7 +1,7 @@
 import time
 import threading
 import multiprocessing
-N = 38
+N = 35
 ITERATIONS = 10
 
 def fib(n):
@@ -36,11 +36,11 @@ if __name__ == "__main__":
     finish_sync = time.time()
 
     start_thr = time.time()
-    threads_time = threads(N, ITERATIONS)
+    threads(N, ITERATIONS)
     finish_thr = time.time()
 
     start_prc = time.time()
-    processing_time = processing(N, ITERATIONS)
+    processing(N, ITERATIONS)
     finish_prc = time.time()
 
     with open("artifacts/task_1.txt", 'w') as file:
