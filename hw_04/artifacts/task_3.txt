@@ -1,0 +1,9 @@
+Enter message for process A (or 'stop' to quit): first mess
+Enter message for process A (or 'stop' to quit): snd mess
+Enter message for process A (or 'stop' to quit): 
+msg first mess received at Sat Apr  1 16:36:54 2024
+stop
+
+msg snd mess received at Sat Apr  1 16:36:59 2024
+
+this is the end of this program
